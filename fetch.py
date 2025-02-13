@@ -21,7 +21,7 @@ client = TelegramClient('bot_session', API_ID, API_HASH).start()
 
 s3_client = boto3.client(
     's3',
-	endpoint_url="https://fra1.digitaloceanspaces.com",
+	endpoint_url=f"https://{S3_REGION}.digitaloceanspaces.com",
     region_name=S3_REGION,
     aws_access_key_id=S3_ACCESS_KEY,
     aws_secret_access_key=S3_SECRET_KEY
